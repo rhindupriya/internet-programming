@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: lightblue;
+            margin: 0;
+            padding: 20px;
+        }
+        .dashboard-container {
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 30px;
+            color: darkblue;
+        }
+        .dashboard-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .dashboard-item {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            color: darkgreen;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .dashboard-item:hover {
+            background-color: lightgreen;
+        }
+        .dashboard-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+    <h2>User Dashboard</h2>
+    <div class="dashboard-grid">
+        <!-- Check Daily Work Updates -->
+        <a href="dailywork.html" class="dashboard-item">
+            <img src="workupdates.jpg" alt="Check Daily Work Updates">
+            Check Daily Work Updates
+        </a>
+
+        <!-- Choose Best Route -->
+        <a href="cbr.html" class="dashboard-item">
+            <img src="cbr.jpg" alt="Choose Best Route">
+            Choose Best Route
+        </a>
+
+        <!-- Update Garbage Load -->
+        <a href="updategarbageload.html" class="dashboard-item">
+            <img src="garbage.jpg" alt="Update Garbage Load">
+            Update Garbage Load
+        </a>
+        <a href="index.html" class="dashboard-item">
+            <img src="login.jpg" alt="Logout">
+            Logout
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

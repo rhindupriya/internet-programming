@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Garbage Load</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightblue;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Update Garbage Load</h2>
+    <form action="update-garbage-load-process.php" method="POST">
+        <label for="bin_id">Bin ID:</label>
+        <input type="text" id="bin_id" name="bin_id" placeholder="Enter Bin ID" required>
+
+        <label for="load_type">Garbage Load Type:</label>
+        <select id="load_type" name="load_type" required>
+            <option value="">Select load type</option>
+            <option value="regular">Regular</option>
+            <option value="hazardous">Hazardous</option>
+            <option value="organic">Organic</option>
+        </select>
+
+        <label for="load_amount">Garbage Load Amount (in kg):</label>
+        <input type="text" id="load_amount" name="load_amount" placeholder="Enter load amount" required>
+
+        <button type="submit">Update Load</button>
+    </form>
+</div>
+
+</body>
+</html>

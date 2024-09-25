@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #81c3d7, #4a90e2);
+            margin: 0;
+            color: white;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.7); /* Adjust transparency here */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for contrast */
+            width: 400px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+        .error {
+            color: red;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>User Login</h2>
+    <div class="error" id="error-message"></div>
+    <form onsubmit="return validateLogin()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter User Username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter User Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+    // Predefined user credentials (this can be dynamic in real scenarios)
+    const userUsername = 'user';
+    const userPassword = 'user123';
+
+    function validateLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const errorMessage = document.getElementById('error-message');
+
+        // Check if the username and password match the predefined values
+        if (username === userUsername && password === userPassword) {
+            // Redirect to the User Dashboard or User Page
+            window.location.href = 'dashboard1.html';
+            return false; // Prevent default form submission
+        } else {
+            errorMessage.textContent = 'Invalid Username or Password!';
+            return false; // Prevent form submission if invalid
+        }
+    }
+</script>
+
+</body>
+</html>
